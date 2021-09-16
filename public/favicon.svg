@@ -1,25 +1,23 @@
-<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg"> 
     <style>
-        path { fill: #000000; }
+        .text {
+            fill: #0F145B;
+        }
         @media (prefers-color-scheme: dark) {
-        path { fill: #ffffff; }
+            .text {
+                fill: #43C1C5;
+            }
         }
     </style>
-    <defs>
-        <style type="text/css">
-            @font-face {
-                font-family: DancingScript;
-                src: url('../src/fonts/DancingScript-VariableFont_wght.ttf');
-            }
-        </style>
-    </defs>
-  <text x="0" y="100" 
-  style="font-size:98px;
-        font-style:normal;
-        font-variant:normal;
-        font-weight:normal;
-        font-stretch:normal;
-        letter-spacing:0px;
-        font-family:DancingScript';
-        -inkscape-font-specification:DancingScript'"> CY </text>
+    <text 
+        x="50%" 
+        y="50%"
+        dominant-baseline="middle" 
+        text-anchor="middle"
+        class="text"
+        style="
+        font: italic 100px serif
+        "
+    > CY 
+    </text>
 </svg>
