@@ -24,11 +24,11 @@
     .nav-text {
       position: absolute;
       display: block;
-      color: $primary-color;
       border-radius: 5px;
       padding: 0.25rem 0.5rem;
       top: -25%;
       right: 2vw;
+      text-decoration: underline;
 
       &:hover {
         color: $secondary-color;
