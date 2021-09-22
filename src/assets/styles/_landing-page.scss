@@ -42,7 +42,6 @@
 
   &-text {
     flex-grow: 1;
-    border: 5px solid #3d5a80;
     border-radius: 10px;
     overflow-y: auto;
 
@@ -59,8 +58,8 @@
     }
 
     .tag {
-      background: #3d5a80;
-      border: 5px solid #3d5a80;
+      background: $component-color;
+      border: 5px solid $component-color;
       padding: 0.25rem 5px;
     }
   }
