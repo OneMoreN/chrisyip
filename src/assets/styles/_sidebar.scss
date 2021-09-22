@@ -1,19 +1,18 @@
 .sidebar {
   height: 100%;
-  width: 200px;
+  width: 15vw;
   position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
   padding-right: 10px;
   overflow-x: hidden;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   &-item {
-    margin: 12px 0;
+    margin: 1vh 0;
     width: 100%;
     text-align: right;
     position: relative;
@@ -29,7 +28,7 @@
       border-radius: 5px;
       padding: 0.25rem 0.5rem;
       top: -25%;
-      right: 30px;
+      right: 2vw;
 
       &:hover {
         color: $secondary-color;
@@ -38,7 +37,7 @@
 
     .faNav {
       &:hover {
-        padding-left: 15px;
+        padding-left: 2vw;
       }
     }
   }

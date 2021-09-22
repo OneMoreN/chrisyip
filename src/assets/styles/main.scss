@@ -1,25 +1,5 @@
 @import "variables";
+@import "gloabal";
 @import "navbar";
 @import "sidebar";
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100vh;
-  font-family: "Inter", serif;
-  background: $background-color;
-  color: $primary-color;
-}
-
-#{$a-tags} {
-  color: $primary-color;
-  text-decoration: none;
-}
-
-a:hover {
-  color: $secondary-color;
-}
+@import "landing-page";

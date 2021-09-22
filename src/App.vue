@@ -1,8 +1,10 @@
 <template>
   <div id="topnav">
-    <img class="logo" alt="CY" src="@/assets/logo.png">
+    <router-link to="/">
+      <img class="logo" alt="CY" src="@/assets/images/logo.png">
+    </router-link>
   </div>
-  <div class="sidebar">
+  <div class="sidebar d-flex">
     <SidebarLink
       :route="'/'"
       :navText="'Home'"
