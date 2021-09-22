@@ -1,32 +1,61 @@
 .landing {
   margin: 0 10vw;
   justify-content: center;
+  flex-direction: column-reverse;
   position: relative;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 69px);
 
-  &-left {
+  @include sm {
+    flex-direction: row;
+    height: calc(100vh - 70px);
+  }
+
+  &-image {
     align-self: center;
+    flex-grow: 1;
+
     img {
       width: auto;
       height: calc(30vw);
       top: 50%;
     }
+
+    @include sm {
+      width: auto;
+      flex-grow: 0;
+    }
   }
 
-  &-right {
-    flex-grow: 3;
+  &-tag {
     text-align: center;
     align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    flex-grow: 1;
+
+    @include sm {
+      width: auto;
+      display: block;
+    }
   }
 
   &-text {
-    margin: 0 20%;
+    flex-grow: 1;
     border: 5px solid #3d5a80;
     border-radius: 10px;
     overflow-y: auto;
 
+    @include sm {
+      margin: 0 20%;
+    }
+
     .name {
-      margin: 2rem 0;
+      margin: 1rem 0;
+
+      @include sm {
+        margin: 2rem 0;
+      }
     }
 
     .tag {

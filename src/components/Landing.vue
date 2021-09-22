@@ -1,9 +1,9 @@
 <template>
   <div class="landing d-flex">
-    <div class="landing-left">
+    <div class="landing-image">
       <img :src="landingImg"/>
     </div>
-    <div class="landing-right">
+    <div class="landing-tag d-flex">
       <div class="landing-text">
         <div class="tag"><h1>H E L L O !</h1></div>
         <div class="tag">my name is</div>
