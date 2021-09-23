@@ -2,10 +2,15 @@
   justify-content: center;
   flex-direction: column-reverse;
   position: relative;
-  height: 70vh;
+  height: 50vh;
 
   @include sm {
     flex-direction: row;
+    height: 55vh;
+  }
+
+  @include md {
+    height: 70vh;
   }
 
   #{&}-image {
@@ -75,10 +80,16 @@
   &-links {
     flex-direction: column-reverse;
     justify-content: center;
-    height: calc(30vh - 70px);
+    height: calc(50vh - 70px);
 
     @include sm {
       flex-direction: row;
+      height: calc(45vh - 70px);
+    }
+
+    @include md {
+      flex-direction: row;
+      height: calc(30vh - 70px);
     }
 
     #{&}-container {
