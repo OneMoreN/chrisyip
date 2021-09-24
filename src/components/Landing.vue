@@ -8,7 +8,7 @@
         <div class="tag"><h1>H E L L O !</h1></div>
         <div class="tag">my name is</div>
         <div class="name"><h1>Christopher Yip</h1></div>
-        <div class="tag">I'm a <b>Software Developer</b></div>
+        <div class="tag">I'm a <h2 class="d-inline">Software Developer</h2></div>
       </div>
     </div>
   </div>

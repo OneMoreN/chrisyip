@@ -24,7 +24,7 @@
 
     img {
       width: auto;
-      height: 50vw;
+      height: 40vw;
       top: 50%;
       margin: 0 auto;
 
@@ -75,6 +75,10 @@
       border: 5px solid $component-color;
       padding: 0.25rem 5px;
     }
+
+    > :first-child {
+      padding: 0;
+    }
   }
 
   &-links {
@@ -105,7 +109,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5px;
+        padding: 0.5rem;
         border: 1.5px solid $primary-color;
         border-radius: 5px;
       }
@@ -127,8 +131,4 @@
       display: inline-block;
     }
   }
-}
-
-.m-b-10 {
-  margin-bottom: 10px;
 }
