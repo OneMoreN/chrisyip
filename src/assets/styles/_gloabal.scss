@@ -1,0 +1,76 @@
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: $background-color;
+  color: $primary-color;
+  line-height: 1.3;
+  font-size: 12px;
+  font-size: 2vw;
+  margin: 0 10%;
+
+  @include sm {
+    font-size: 1.2vw;
+  }
+
+  @include lg {
+    font-size: 1vw;
+  }
+}
+
+#{$a-tags} {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $secondary-color;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.d-inline {
+  display: inline-block;
+}

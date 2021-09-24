@@ -1,0 +1,134 @@
+.landing {
+  justify-content: center;
+  flex-direction: column-reverse;
+  position: relative;
+  height: 50vh;
+
+  @include sm {
+    flex-direction: row;
+    height: 55vh;
+  }
+
+  @include md {
+    height: 70vh;
+  }
+
+  #{&}-image {
+    align-self: center;
+    flex-grow: 1;
+    display: none;
+
+    @include sm {
+      display: flex;
+    }
+
+    img {
+      width: auto;
+      height: 40vw;
+      top: 50%;
+      margin: 0 auto;
+
+      @include sm {
+        height: 30vw;
+        margin: 0 0;
+      }
+    }
+
+    @include sm {
+      flex-grow: 0;
+    }
+  }
+
+  #{&}-tag {
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    flex-grow: 1;
+
+    @include sm {
+      width: auto;
+      display: block;
+    }
+  }
+
+  #{&}-text {
+    flex-grow: 1;
+    border-radius: 10px;
+    overflow-y: auto;
+
+    @include sm {
+      margin: 0 20%;
+    }
+
+    .name {
+      margin: 1rem 0;
+
+      @include sm {
+        margin: 2rem 0;
+      }
+    }
+
+    .tag {
+      background: $component-color;
+      border: 5px solid $component-color;
+      padding: 0.25rem 5px;
+    }
+
+    > :first-child {
+      padding: 0;
+    }
+  }
+
+  &-links {
+    flex-direction: column-reverse;
+    justify-content: center;
+    height: calc(50vh - 70px);
+
+    @include sm {
+      flex-direction: row;
+      height: calc(45vh - 70px);
+    }
+
+    @include md {
+      flex-direction: row;
+      height: calc(30vh - 70px);
+    }
+
+    #{&}-container {
+      flex-grow: 1;
+      flex-direction: column;
+      align-items: center;
+
+      > :not(:last-child) {
+        margin: 0 0 10px 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border: 1.5px solid $primary-color;
+        border-radius: 5px;
+      }
+
+      i {
+        font-size: 1rem;
+
+        @include sm {
+          font-size: 1.5rem;
+        }
+
+        @include md {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &-text {
+      display: inline-block;
+    }
+  }
+}
