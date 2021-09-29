@@ -14,7 +14,6 @@
     </form>
 
     <h2 v-if="submitted" class="success">Thank you, your message has been submitted successfully!</h2>
-    <h2 v-if="error" >Oops, looks like something went wrong!</h2>
   </div>
 
   <div class="contact-image">
@@ -36,8 +35,7 @@ export default {
         email: '',
         message: ''
       },
-      submitted: false,
-      error: false
+      submitted: false
     }
   },
   methods: {
@@ -50,10 +48,6 @@ export default {
     },
     sentSuccess () {
       this.submitted = true
-      if (this.error === true) this.error = false
-    },
-    handleError () {
-      this.error = true
     },
     handleSubmit () {
       const axiosConfig = {
@@ -72,7 +66,6 @@ export default {
       )
         .then(() => {
           this.sentSuccess()
-          console.log(`submitted ${this.submitted}`)
         })
         .catch(() => {
           this.$router.push('404')
