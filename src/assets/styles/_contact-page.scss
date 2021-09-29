@@ -24,7 +24,6 @@
   background-color: $component-color;
   flex-grow: 1;
   padding: 1em 2em 1em 2em;
-  // width: 80%;
 
   @include md {
     width: 100%;
@@ -44,6 +43,16 @@
 
     .form-element {
       flex-direction: column;
+
+      span {
+        display: none;
+      }
+
+      .error {
+        display: inline;
+        float: right;
+        color: #f54d42;
+      }
 
       .form-input {
         border-radius: 4px;

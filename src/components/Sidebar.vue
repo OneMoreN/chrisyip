@@ -6,12 +6,12 @@
       :faIcon="'fas fa-home'"
       :hoverFaIcon="'fas fa-home'"
     />
-    <SidebarLink
+    <!-- <SidebarLink
       :route="'/contact-me'"
       :navText="'About'"
       :faIcon="'far fa-circle'"
       :hoverFaIcon="'fas fa-circle'"
-    />
+    /> -->
   </div>
 </template>
 
