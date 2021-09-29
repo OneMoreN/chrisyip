@@ -1,16 +1,27 @@
+#home {
+  height: calc(100vh - 40px);
+
+  @include md {
+    height: calc(100vh - 50px);
+  }
+
+  @include lg {
+    height: calc(100vh - 60px);
+  }
+}
+
 .landing {
   justify-content: center;
   flex-direction: column-reverse;
-  position: relative;
-  height: 50vh;
+  height: 55%;
 
   @include sm {
     flex-direction: row;
-    height: 55vh;
+    height: 60%;
   }
 
   @include md {
-    height: 70vh;
+    height: 70%;
   }
 
   #{&}-image {
@@ -19,18 +30,21 @@
     display: none;
 
     @include sm {
-      display: flex;
+      display: block;
     }
 
     img {
       width: auto;
-      height: 40vw;
       top: 50%;
       margin: 0 auto;
 
       @include sm {
         height: 30vw;
-        margin: 0 0;
+        margin: 0;
+      }
+
+      @include md {
+        height: 25vw;
       }
     }
 
@@ -55,7 +69,7 @@
 
   #{&}-text {
     flex-grow: 1;
-    border-radius: 10px;
+    border-radius: 1em;
     overflow-y: auto;
 
     @include sm {
@@ -84,16 +98,15 @@
   &-links {
     flex-direction: column-reverse;
     justify-content: center;
-    height: calc(50vh - 70px);
+    height: 45%;
 
     @include sm {
       flex-direction: row;
-      height: calc(45vh - 70px);
+      height: 40%;
     }
 
     @include md {
-      flex-direction: row;
-      height: calc(30vh - 70px);
+      height: 30%;
     }
 
     #{&}-container {
@@ -101,28 +114,22 @@
       flex-direction: column;
       align-items: center;
 
-      > :not(:last-child) {
-        margin: 0 0 10px 0;
-      }
-
       a {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0.5rem;
-        border: 1.5px solid $primary-color;
-        border-radius: 5px;
+        margin: 10px 0 0 0;
       }
 
       i {
-        font-size: 1rem;
+        font-size: 1em;
 
         @include sm {
-          font-size: 1.5rem;
+          font-size: 1.5em;
         }
 
         @include md {
-          font-size: 1.5rem;
+          font-size: 1.5em;
         }
       }
     }

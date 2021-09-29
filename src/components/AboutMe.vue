@@ -1,5 +1,5 @@
 <template>
   <div class="aboutme">
-    Hello WOrld1
+    Cya World!
   </div>
 </template>

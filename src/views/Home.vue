@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div id="home">
     <Landing/>
-    <!-- <AboutMe/> -->
   </div>
+  <!-- <AboutMe/> -->
 </template>
 
 <script>

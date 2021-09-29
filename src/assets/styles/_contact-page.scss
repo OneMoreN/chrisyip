@@ -1,0 +1,108 @@
+.contact-container {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+  padding-bottom: 30px;
+  flex-direction: column-reverse;
+
+  @include sm {
+    width: 80%;
+    top: 50px;
+  }
+
+  @include md {
+    top: 50px;
+  }
+
+  @include lg {
+    flex-direction: row;
+    top: 25%;
+  }
+}
+
+.contact-form-container {
+  background-color: $component-color;
+  flex-grow: 1;
+  padding: 1em 2em 1em 2em;
+  // width: 80%;
+
+  @include md {
+    width: 100%;
+  }
+
+  @include lg {
+    width: 40%;
+  }
+
+  .contact-form {
+    margin-top: 1em;
+    flex-direction: column;
+
+    > :not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    .form-element {
+      flex-direction: column;
+
+      .form-input {
+        border-radius: 4px;
+        padding: 0.5em;
+        border-style: none;
+        margin-top: 5px;
+        border: 1.5px solid $background-color;
+        max-width: 100%;
+        min-width: 100%;
+        resize: none;
+        font-size: 1em;
+
+        transition: border-color 0.5s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $secondary-color;
+        }
+
+        &:hover:not(:focus) {
+          border-color: $primary-color;
+        }
+      }
+    }
+
+    button {
+      margin: 1em 0;
+      font-size: 1em;
+
+      &:disabled,
+      &[disabled] {
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.contact-image {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: auto;
+    height: 40vw;
+
+    @include md {
+      width: auto;
+      height: 35vw;
+    }
+
+    @include lg {
+      width: auto;
+      height: 25vw;
+    }
+  }
+}
+
+.success {
+  color: lime;
+}
