@@ -1,25 +1,23 @@
 .sidebar {
   height: 100%;
-  width: 15vw;
   position: fixed;
-  z-index: 1;
   top: 0;
   right: 0;
   padding-right: 10px;
-  overflow-x: hidden;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: none;
+
+  @include sm {
+    display: flex;
+  }
 
   &-item {
     margin: 1vh 0;
     width: 100%;
     text-align: right;
     position: relative;
-
-    .router-link-active {
-      color: $secondary-color;
-    }
 
     .nav-text {
       position: absolute;
@@ -29,15 +27,16 @@
       top: -25%;
       right: 2vw;
       text-decoration: underline;
-
-      &:hover {
-        color: $secondary-color;
-      }
     }
 
     .faNav {
       &:hover {
         padding-left: 2vw;
+      }
+
+      &.router-link-exact-active {
+        color: $secondary-color;
+        border-color: $secondary-color;
       }
     }
   }

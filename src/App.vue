@@ -1,32 +1,26 @@
 <template>
-  <div id="topnav">
+  <header id="topnav">
     <router-link to="/">
       <img class="logo" alt="CY" src="@/assets/images/logo.png">
     </router-link>
-  </div>
-  <div class="sidebar d-flex">
-    <SidebarLink
-      :route="'/'"
-      :navText="'Home'"
-      :faIcon="'fas fa-home'"
-      :hoverFaIcon="'fas fa-home'"
-    />
-    <SidebarLink
-      :route="'/about'"
-      :navText="'About'"
-      :faIcon="'far fa-circle'"
-      :hoverFaIcon="'fas fa-circle'"
-    />
-  </div>
+
+    <div class="nav-links">
+      <router-link to="/contact-me" id="button">
+        Contact Me <i class="fas fa-envelope"></i>
+      </router-link>
+    </div>
+    <Sidebar />
+  </header>
+
   <router-view/>
 </template>
 
 <script>
-import SidebarLink from '@/components/SidebarLink.vue'
+import Sidebar from '@/components/Sidebar.vue'
 
 export default {
   components: {
-    SidebarLink
+    Sidebar
   },
   data () {
     return {

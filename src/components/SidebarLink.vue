@@ -15,7 +15,6 @@
         {{navText}}
       </div>
       <i
-        :active="isActive"
         :class="hover ? hoverFaIcon : faIcon"
       >
       </i>
@@ -34,7 +33,6 @@ export default {
 
   data () {
     return {
-      isActive: false,
       hover: false,
       firstPage: true
     }
