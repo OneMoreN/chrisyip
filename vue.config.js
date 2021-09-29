@@ -11,17 +11,14 @@ module.exports = {
           // Absolute path to compiled SPA
           path.resolve(__dirname, 'dist'),
           // List of routes to prerender
-          ['/'], ['/contact-me'],
+          ['/', '/contact-me'],
           {
             // options
           }
         )
       ]
     }
-  }
-}
-
-module.exports = {
+  },
   chainWebpack: config => {
     config
       .plugin('html')
