@@ -10,21 +10,21 @@
         <label class="form-element d-flex">
           <div>
             Name
-            <span class="error" v-if="v$.form.name.$error">{{ v$.form.name.$errors[0].$message }}</span>
+            <small class="error" v-if="v$.form.name.$error">{{ v$.form.name.$errors[0].$message }}</small>
           </div>
           <input :disabled="submitted" v-model="state.form.name" type="text" name="name" class="form-input"/>
         </label>
         <label class="form-element d-flex">
           <div>
             Email address
-            <span class="error" v-if="v$.form.email.$error">{{ v$.form.email.$errors[0].$message }}</span>
+            <small class="error" v-if="v$.form.email.$error">{{ v$.form.email.$errors[0].$message }}</small>
           </div>
           <input :disabled="submitted" v-model="state.form.email" type="email" name="email" class="form-input"/>
         </label>
         <label class="form-element d-flex">
           <div>
             Message
-            <span class="error" v-if="v$.form.message.$error">{{ v$.form.message.$errors[0].$message }}</span>
+            <small class="error" v-if="v$.form.message.$error">{{ v$.form.message.$errors[0].$message }}</small>
           </div>
           <textarea :disabled="submitted" v-model="state.form.message" name="message" class="form-input" rows="6"></textarea>
         </label>
@@ -45,7 +45,7 @@
 <script>
 import axios from 'axios'
 import useVuelidate from '@vuelidate/core'
-import { required, email } from '@vuelidate/validators'
+import { required, email, helpers } from '@vuelidate/validators'
 import { reactive, computed } from 'vue'
 
 export default {
@@ -61,9 +61,12 @@ export default {
     const rules = computed(() => {
       return {
         form: {
-          name: { required },
-          email: { required, email },
-          message: { required }
+          name: { required: helpers.withMessage('Name is required', required) },
+          email: {
+            required: helpers.withMessage('Email is required', required),
+            email: helpers.withMessage('Email entered is not a valid email address', email)
+          },
+          message: { required: helpers.withMessage('A Message is required', required) }
         }
       }
     })
@@ -117,6 +120,7 @@ export default {
             this.$router.push('404')
           })
       }
+      console.log(this.v$.form.email)
     }
   }
 }
