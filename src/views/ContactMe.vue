@@ -120,7 +120,6 @@ export default {
             this.$router.push('404')
           })
       }
-      console.log(this.v$.form.email)
     }
   }
 }
