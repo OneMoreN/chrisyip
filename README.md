@@ -1,6 +1,6 @@
-# Christopher Yip Website Portfolio
+# Christopher Yip Portfolio Website
 
-My website portfolio to showcase all my current works as a software developer.
+My portfolio website to showcase all my current work as a software developer.
 
 This website is built on Vue.js and SASS.
 
