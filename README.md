@@ -1,4 +1,8 @@
-# chrisyip
+# Christopher Yip Portfolio Website
+
+My portfolio website to showcase all my current work as a software developer.
+
+This website is built on Vue.js and SASS.
 
 ## Project setup
 ```
@@ -23,6 +27,3 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-
-https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
-https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
