@@ -1,45 +1,47 @@
 <template>
-<div class="contact-container d-flex">
-  <div class="contact-form-container">
-    <h1>
-      Get in touch with me
-    </h1>
-    <form @submit.prevent="handleSubmit" name="contact-me" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form d-flex">
+<section>
+  <div class="contact-container d-flex">
+    <div class="contact-form-container">
+      <h1>
+        Get in touch with me
+      </h1>
+      <form @submit.prevent="handleSubmit" name="contact-me" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form d-flex">
 
-      <input type="hidden" name="form-name" value="contact-me" />
-        <label class="form-element d-flex">
-          <div>
-            Name
-            <small class="error" v-if="v$.form.name.$error">{{ v$.form.name.$errors[0].$message }}</small>
-          </div>
-          <input :disabled="submitted" v-model="state.form.name" type="text" name="name" class="form-input"/>
-        </label>
-        <label class="form-element d-flex">
-          <div>
-            Email address
-            <small class="error" v-if="v$.form.email.$error">{{ v$.form.email.$errors[0].$message }}</small>
-          </div>
-          <input :disabled="submitted" v-model="state.form.email" type="email" name="email" class="form-input"/>
-        </label>
-        <label class="form-element d-flex">
-          <div>
-            Message
-            <small class="error" v-if="v$.form.message.$error">{{ v$.form.message.$errors[0].$message }}</small>
-          </div>
-          <textarea :disabled="submitted" v-model="state.form.message" name="message" class="form-input" rows="6"></textarea>
-        </label>
-        <button type="submit" id="button" :disabled="submitted" >
-          Submit
-        </button>
-    </form>
+        <input type="hidden" name="form-name" value="contact-me" />
+          <label class="form-element d-flex">
+            <div>
+              Name
+              <small class="error" v-if="v$.form.name.$error">{{ v$.form.name.$errors[0].$message }}</small>
+            </div>
+            <input :disabled="submitted" v-model="state.form.name" type="text" name="name" class="form-input"/>
+          </label>
+          <label class="form-element d-flex">
+            <div>
+              Email address
+              <small class="error" v-if="v$.form.email.$error">{{ v$.form.email.$errors[0].$message }}</small>
+            </div>
+            <input :disabled="submitted" v-model="state.form.email" type="email" name="email" class="form-input"/>
+          </label>
+          <label class="form-element d-flex">
+            <div>
+              Message
+              <small class="error" v-if="v$.form.message.$error">{{ v$.form.message.$errors[0].$message }}</small>
+            </div>
+            <textarea :disabled="submitted" v-model="state.form.message" name="message" class="form-input" rows="6"></textarea>
+          </label>
+          <button type="submit" id="button" :disabled="submitted" >
+            Submit
+          </button>
+      </form>
 
-    <h2 v-if="submitted" class="success">Thank you, your message has been submitted successfully!</h2>
+      <h2 v-if="submitted" class="success">Thank you, your message has been submitted successfully!</h2>
+    </div>
+
+    <div class="contact-image">
+      <img :src="contactImg"/>
+    </div>
   </div>
-
-  <div class="contact-image">
-    <img :src="contactImg"/>
-  </div>
-</div>
+</section>
 </template>
 
 <script>

@@ -1,17 +1,19 @@
 <template>
   <div class="sidebar d-flex">
     <SidebarLink
-      :route="'/'"
+      :route="'Home'"
       :navText="'Home'"
       :faIcon="'fas fa-home'"
       :hoverFaIcon="'fas fa-home'"
+      :hash="''"
     />
-    <!-- <SidebarLink
-      :route="'/contact-me'"
+    <SidebarLink
+      :route="'Home'"
+      :hash="'#about-me'"
       :navText="'About'"
       :faIcon="'far fa-circle'"
       :hoverFaIcon="'fas fa-circle'"
-    /> -->
+    />
   </div>
 </template>
 

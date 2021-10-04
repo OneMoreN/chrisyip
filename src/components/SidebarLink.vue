@@ -3,7 +3,7 @@
     class="sidebar-item"
   >
     <router-link
-      :to="route"
+      :to="{name: route, hash: hash}"
       class="faNav"
       @mouseover="hover = true"
       @mouseleave="hover = false"
@@ -28,7 +28,8 @@ export default {
     navText: String,
     faIcon: String,
     hoverFaIcon: String,
-    route: String
+    route: String,
+    hash: String
   },
 
   data () {

@@ -33,11 +33,6 @@
       &:hover {
         padding-left: 2vw;
       }
-
-      &.router-link-exact-active {
-        color: $secondary-color;
-        border-color: $secondary-color;
-      }
     }
   }
 }
