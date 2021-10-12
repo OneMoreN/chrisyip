@@ -1,22 +1,17 @@
 .contact-container {
   position: absolute;
   width: 100%;
-  top: 15%;
+  top: 50px;
   padding-bottom: 30px;
   flex-direction: column-reverse;
 
   @include sm {
     width: 80%;
-    top: 50px;
-  }
-
-  @include md {
-    top: 50px;
   }
 
   @include lg {
     flex-direction: row;
-    top: 25%;
+    top: 25vh;
   }
 }
 

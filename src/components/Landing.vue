@@ -31,10 +31,10 @@
       </a>
     </div>
   </div>
-    <router-link
-      :to="{ name: 'Home', hash: '#about-me' }"
-    >
-  <div class="arrows"></div>
+  <router-link
+    :to="{ name: 'Home', hash: '#about-me' }"
+  >
+    <div class="arrows"></div>
   </router-link>
 </template>
 

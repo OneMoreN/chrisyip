@@ -1,18 +1,36 @@
 <template>
-  <header id="topnav" ref="topnav" :class="{ 'onScroll': !pageTop}">
-    <router-link to="/">
-      <img class="logo" alt="CY" src="@/assets/images/logo.png">
-    </router-link>
 
-    <div class="nav-links">
-      <router-link to="/contact-me" id="button">
-        Contact Me <i class="fas fa-envelope"></i>
-      </router-link>
+  <div class="hamburger">
+    <input type="checkbox" name="" id="" v-model="menuActive" @click="handleCheckbox">
+    <div class="hamburger-lines">
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
     </div>
-  </header>
-  <Sidebar />
+  </div>
 
-  <router-view/>
+  <div class="mainContent" :class="menuActive ? 'menuActive' : ''">
+    <header id="topnav" ref="topnav"
+      :class="[{
+          'onScroll': !pageTop
+        },
+        scrollDown ? 'scrolled-down' : 'scrolled-up'
+        ]"
+    >
+      <router-link to="/">
+        <img class="logo" alt="CY" src="@/assets/images/logo.png">
+      </router-link>
+
+      <div class="nav-links">
+        <router-link to="/contact-me" id="button">
+          Contact Me <i class="fas fa-envelope"></i>
+        </router-link>
+      </div>
+    </header>
+
+    <Sidebar :class="{ 'active' : menuActive }"/>
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -25,22 +43,25 @@ export default {
   data () {
     return {
       prevScrollpos: window.pageYOffset,
-      pageTop: true
+      pageTop: true,
+      menuActive: false,
+      scrollDown: false
     }
   },
   beforeMount () {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
+
     handleScroll () {
       var currentScrollPos = window.pageYOffset
       if (this.prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
-        this.$refs.topnav.classList.remove('scrolled-down')
-        this.$refs.topnav.classList.add('scrolled-up')
+        this.scrollDown = false
       } else {
-        this.$refs.topnav.classList.remove('scrolled-up')
-        this.$refs.topnav.classList.add('scrolled-down')
+        this.scrollDown = true
       }
+
+      console.log(this.scrollDown)
 
       if (currentScrollPos > 0) {
         this.pageTop = false

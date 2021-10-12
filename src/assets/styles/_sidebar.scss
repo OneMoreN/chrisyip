@@ -2,15 +2,27 @@
   height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -105px;
   padding-right: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  display: none;
+  background: $component-color;
+  min-width: 100px;
+  box-shadow: 0 0 5px #000;
+  z-index: 100;
+  transition: right 0.3s ease;
+
+  &.active {
+    right: 0;
+  }
 
   @include sm {
     display: flex;
+    background: none;
+    right: 0;
+    min-width: 0;
+    box-shadow: none;
   }
 
   &-item {
@@ -22,7 +34,6 @@
     .nav-text {
       position: absolute;
       display: block;
-      border-radius: 5px;
       padding: 0.25rem 0.5rem;
       top: -25%;
       right: 2vw;
