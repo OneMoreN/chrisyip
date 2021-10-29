@@ -2,13 +2,13 @@
   height: 100%;
   position: fixed;
   top: 0;
-  right: -105px;
+  right: -$sidebar-width;
   padding-right: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background: $component-color;
-  min-width: 100px;
+  min-width: $sidebar-width;
   box-shadow: 0 0 5px #000;
   z-index: 100;
   transition: right 0.3s ease;
@@ -17,7 +17,7 @@
     right: 0;
   }
 
-  @include sm {
+  @include lg {
     display: flex;
     background: none;
     right: 0;
@@ -36,7 +36,7 @@
       display: block;
       padding: 0.25rem 0.5rem;
       top: -25%;
-      right: 2vw;
+      right: 2rem;
       text-decoration: underline;
     }
 
@@ -46,4 +46,12 @@
       }
     }
   }
+}
+
+.close-sidebar.active {
+  top: 0;
+  z-index: 95;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
 }

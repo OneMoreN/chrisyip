@@ -1,6 +1,6 @@
 .contact-container {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 70px);
   top: 50px;
   padding-bottom: 30px;
   flex-direction: column-reverse;

@@ -1,8 +1,29 @@
 .aboutme {
   height: 100vh;
-  width: auto;
+  align-items: center;
 
-  .current-work-logo {
-    width: 300px;
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  .intro {
+    margin: auto;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    padding: 2rem;
+    border: solid 1px $component-color;
+
+    @include lg {
+      padding: 3rem;
+      margin: 0 50px;
+      text-align: justify;
+    }
+
+    p:not(:last-child) {
+      margin: 0 0 15px;
+    }
+
+    .heading {
+      text-align: center;
+    }
   }
 }

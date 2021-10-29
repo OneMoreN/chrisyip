@@ -12,6 +12,10 @@
       </div>
     </div>
   </div>
+  <div class="landing-intro">
+    I have experience in IBM iSeries (AS400), LANSA RDML Programming and
+    Full-stack Web Development (currently using PHP (Laravel), Vue.js and SASS).
+  </div>
   <div class="landing-links d-flex">
     <div class="landing-links-container d-flex">
       <SocialLink

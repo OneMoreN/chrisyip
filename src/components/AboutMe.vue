@@ -1,27 +1,26 @@
 <template>
-  <div class="aboutme">
-
-    <h2> About Me </h2>
-
+  <div class="aboutme d-flex">
     <div class="intro">
-      Hi again! My name is Christopher Yip, I'm a Software Developer with experience in:
-      <ul>
-        <li>IBM iSeries (AS400), LANSA RDML Programming</li>
-        <li>Full-stack Web Development</li>
-      </ul>
-      The current technologies I am using for web development are:
-      <ul>
-        <li>Laravel</li>
-        <li>Vue.js</li>
-        <li>SASS</li>
-      </ul>
-    </div>
-
-    <h2> Current Work </h2>
-
-    <div class="current-work">
-      I am currently working at Americold Logistics
-      <img class="current-work-logo" alt="Americold Logo" src="@/assets/images/Americold_logo1.png">
+      <h2 class="heading"> About Me </h2>
+      <p>
+      Hello again! My name is Christopher Yip and I enjoy coding, cooking and playing board games
+      (my current board games of choice are
+      <a href="https://boardgamegeek.com/boardgame/13/catan" target="_blank" rel="noopener noreferrer">Catan</a>
+      and
+      <a
+        href="https://boardgamegeek.com/boardgame/156129/deception-murder-hong-kong"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Deception</a>).
+      I first discovered web development in high school when I wrote my first HTML/CSS website on Notepad.
+      </p>
+      <p>
+      Since my first website, I have graduated with a Bachelor's degree in Information and Communications
+      Technology from Western Sydney University where I futher developed my skills and interest in software development.
+      I currently work as a Software Developer at <a>Americold Logistics</a>, primarily working on
+      updating/maintaining their in-house Warehouse Management System.
+      </p>
     </div>
   </div>
 </template>

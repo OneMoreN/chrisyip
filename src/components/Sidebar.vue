@@ -10,7 +10,7 @@
     <SidebarLink
       :route="'Home'"
       :hash="'#about-me'"
-      :navText="'About'"
+      :navText="'About&nbsp;Me'"
       :faIcon="'far fa-circle'"
       :hoverFaIcon="'fas fa-circle'"
     />

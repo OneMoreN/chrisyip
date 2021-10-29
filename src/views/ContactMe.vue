@@ -13,23 +13,44 @@
               Name
               <small class="error" v-if="v$.form.name.$error">{{ v$.form.name.$errors[0].$message }}</small>
             </div>
-            <input :disabled="submitted" v-model="state.form.name" type="text" name="name" class="form-input"/>
+            <input
+              :disabled="submitted"
+              v-model="state.form.name"
+              type="text"
+              name="name"
+              class="form-input"
+              placeholder="e.g. Christopher Yip"
+            />
           </label>
           <label class="form-element d-flex">
             <div>
               Email address
               <small class="error" v-if="v$.form.email.$error">{{ v$.form.email.$errors[0].$message }}</small>
             </div>
-            <input :disabled="submitted" v-model="state.form.email" type="email" name="email" class="form-input"/>
+            <input
+              :disabled="submitted"
+              v-model="state.form.email"
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="e.g. christopheryipeio@gmail.com"
+            />
           </label>
           <label class="form-element d-flex">
             <div>
               Message
               <small class="error" v-if="v$.form.message.$error">{{ v$.form.message.$errors[0].$message }}</small>
             </div>
-            <textarea :disabled="submitted" v-model="state.form.message" name="message" class="form-input" rows="6"></textarea>
+            <textarea
+              :disabled="submitted"
+              v-model="state.form.message"
+              name="message"
+              class="form-input"
+              rows="6"
+            >
+            </textarea>
           </label>
-          <button type="submit" id="button" :disabled="submitted" >
+          <button type="submit" id="button" :disabled="submitted || this.v$.$error" >
             Submit
           </button>
       </form>
@@ -51,6 +72,15 @@ import { required, email, helpers } from '@vuelidate/validators'
 import { reactive, computed } from 'vue'
 
 export default {
+  name: 'ContactMe',
+
+  props: ['menuActive', 'menuChangeScreen'],
+
+  mounted () {
+    console.log(document.querySelectorAll('section'))
+    if (this.menuActive) this.menuChangeScreen()
+  },
+
   setup () {
     const state = reactive({
       form: {
@@ -80,13 +110,14 @@ export default {
       v$
     }
   },
-  name: 'ContactMe',
+
   data () {
     return {
       contactImg: require('@/assets/images/contact.svg'),
       submitted: false
     }
   },
+
   methods: {
     encode (data) {
       return Object.keys(data)

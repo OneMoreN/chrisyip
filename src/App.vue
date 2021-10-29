@@ -1,7 +1,7 @@
 <template>
 
   <div class="hamburger">
-    <input type="checkbox" name="" id="" v-model="menuActive" @click="handleCheckbox">
+    <input type="checkbox" name="" id="" v-model="menuActive">
     <div class="hamburger-lines">
       <span class="line line1"></span>
       <span class="line line2"></span>
@@ -28,8 +28,9 @@
       </div>
     </header>
 
+    <div class="close-sidebar" :class="{ 'active' : menuActive }" @click="menuActive = false"></div>
     <Sidebar :class="{ 'active' : menuActive }"/>
-    <router-view/>
+    <router-view :menuActive="menuActive" :menuChangeScreen="menuChangeScreen"/>
   </div>
 </template>
 
@@ -52,7 +53,9 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
-
+    menuChangeScreen () {
+      this.menuActive = false
+    },
     handleScroll () {
       var currentScrollPos = window.pageYOffset
       if (this.prevScrollpos > currentScrollPos || currentScrollPos <= 0) {
@@ -60,8 +63,6 @@ export default {
       } else {
         this.scrollDown = true
       }
-
-      console.log(this.scrollDown)
 
       if (currentScrollPos > 0) {
         this.pageTop = false
