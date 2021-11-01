@@ -75,7 +75,6 @@ export default {
   props: ['menuActive', 'menuChangeScreen'],
 
   mounted () {
-    console.log(document.querySelectorAll('section'))
     if (this.menuActive) this.menuChangeScreen()
   },
 

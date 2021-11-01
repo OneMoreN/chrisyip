@@ -25,7 +25,7 @@ export default {
       modalActive: false
     }
   },
-  props: ['menuActive', 'menuChangeScreen'],
+  props: ['menuActive', 'menuChangeScreen', 'scrollPos'],
   mounted () {
     // console.log(document.querySelectorAll('section'))
     if (this.menuActive) this.menuChangeScreen()
