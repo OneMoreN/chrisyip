@@ -19,7 +19,6 @@
               type="text"
               name="name"
               class="form-input"
-              placeholder="e.g. Christopher Yip"
             />
           </label>
           <label class="form-element d-flex">
@@ -33,7 +32,6 @@
               type="email"
               name="email"
               class="form-input"
-              placeholder="e.g. christopheryipeio@gmail.com"
             />
           </label>
           <label class="form-element d-flex">

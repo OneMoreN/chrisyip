@@ -29,7 +29,7 @@
     </header>
 
     <div class="close-sidebar" :class="{ 'active' : menuActive }" @click="menuActive = false"></div>
-    <Sidebar :class="{ 'active' : menuActive }"/>
+    <Sidebar :class="{ 'active' : menuActive }" :mobileSidebar="mobileSidebar" :handleResize="handleResize"/>
     <router-view :menuActive="menuActive" :menuChangeScreen="menuChangeScreen"/>
   </div>
 </template>
@@ -46,11 +46,15 @@ export default {
       prevScrollpos: window.pageYOffset,
       pageTop: true,
       menuActive: false,
-      scrollDown: false
+      scrollDown: false,
+      mobileSidebar: true
     }
   },
-  beforeMount () {
+  created () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     menuChangeScreen () {

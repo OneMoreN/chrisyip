@@ -37,7 +37,7 @@ const router = createRouter({
 
     if (to.hash) {
       return window.scrollTo({
-        top: document.querySelector(to.hash).offsetTop,
+        top: document.querySelector(to.hash).offsetTop + 60,
         behavior: 'smooth'
       })
     }

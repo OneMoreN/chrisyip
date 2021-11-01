@@ -18,11 +18,14 @@
   }
 
   @include lg {
+    height: auto;
     display: flex;
     background: none;
     right: 0;
     min-width: 0;
     box-shadow: none;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 
   &-item {
@@ -32,18 +35,10 @@
     position: relative;
 
     .nav-text {
-      position: absolute;
-      display: block;
       padding: 0.25rem 0.5rem;
       top: -25%;
       right: 2rem;
       text-decoration: underline;
-    }
-
-    .faNav {
-      &:hover {
-        padding-left: 2vw;
-      }
     }
   }
 }

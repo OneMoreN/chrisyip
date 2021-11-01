@@ -16,7 +16,8 @@
 }
 
 .contact-form-container {
-  background-color: $component-color;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  border: solid 1px $component-color;
   flex-grow: 1;
   padding: 1em 2em 1em 2em;
 

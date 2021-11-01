@@ -97,14 +97,14 @@
 
   .logo {
     width: auto;
-    height: 30px;
+    height: 35px;
 
     @include md {
-      height: 40px;
+      height: 45px;
     }
 
     @include lg {
-      height: 50px;
+      height: 55px;
     }
   }
 

@@ -8,10 +8,6 @@
     min-height: 600px;
   }
 
-  @include xl {
-    min-height: 800px;
-  }
-
   .arrows {
     @media (max-width: 340px) {
       display: none;
@@ -75,7 +71,6 @@
   justify-content: center;
   flex-direction: column-reverse;
   margin: 20px 0;
-  height: 30%;
 
   @include sm {
     flex-direction: row;
