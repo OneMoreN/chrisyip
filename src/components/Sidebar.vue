@@ -8,7 +8,6 @@
       :navText="link.navText"
       :faIcon="link.faIcon"
       :hoverFaIcon="link.hoverFaIcon"
-      :mobileSidebar="mobileSidebar"
     />
   </div>
 </template>
@@ -20,7 +19,6 @@ export default {
   components: {
     SidebarLink
   },
-  props: ['mobileSidebar'],
   data () {
     return {
       links: [{
@@ -34,8 +32,8 @@ export default {
         route: 'Home',
         hash: '#about-me',
         navText: 'About Me',
-        faIcon: 'far fa-circle',
-        hoverFaIcon: 'fas fa-circle'
+        faIcon: 'far fa-user',
+        hoverFaIcon: 'fas fa-user'
       }]
     }
   }
