@@ -4,6 +4,8 @@ $secondary-color: #ee6c4d;
 $background-color: #293241;
 $component-color: #3d5a80;
 $link-color: #98c1d9;
+$modal-background-color: rgba(0,0,0, 0.6);
+$modal-color: #2c496e;
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
@@ -16,3 +18,11 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+// scroll down arrow
+$arrow-size: 20px;
+$arrow-speed: 3s;
+$peakopacity: 0.7;
+
+// sidebar
+$sidebar-width: 130px;

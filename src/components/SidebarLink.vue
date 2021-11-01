@@ -3,38 +3,33 @@
     class="sidebar-item"
   >
     <router-link
-      :to="route"
+      :to="{name: route, hash: hash}"
       class="faNav"
       @mouseover="hover = true"
       @mouseleave="hover = false"
     >
-      <div
-        v-if="hover || firstPage"
+      <span
         class="nav-text"
       >
         {{navText}}
-      </div>
-      <i
-        :class="hover ? hoverFaIcon : faIcon"
-      >
-      </i>
+      </span>
+      <i :class="hover ? hoverFaIcon : faIcon"></i>
     </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    navText: String,
-    faIcon: String,
-    hoverFaIcon: String,
-    route: String
-  },
-
+  props: [
+    'navText',
+    'faIcon',
+    'hoverFaIcon',
+    'route',
+    'hash'
+  ],
   data () {
     return {
-      hover: false,
-      firstPage: true
+      hover: false
     }
   }
 }

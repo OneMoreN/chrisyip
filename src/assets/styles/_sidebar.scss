@@ -2,15 +2,30 @@
   height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -$sidebar-width;
   padding-right: 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  display: none;
+  background: $component-color;
+  min-width: $sidebar-width;
+  box-shadow: 0 0 5px #000;
+  z-index: 100;
+  transition: right 0.3s ease;
 
-  @include sm {
+  &.active {
+    right: 0;
+  }
+
+  @include lg {
+    height: auto;
     display: flex;
+    background: none;
+    right: 0;
+    min-width: 0;
+    box-shadow: none;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 
   &-item {
@@ -20,24 +35,18 @@
     position: relative;
 
     .nav-text {
-      position: absolute;
-      display: block;
-      border-radius: 5px;
       padding: 0.25rem 0.5rem;
       top: -25%;
-      right: 2vw;
+      right: 2rem;
       text-decoration: underline;
     }
-
-    .faNav {
-      &:hover {
-        padding-left: 2vw;
-      }
-
-      &.router-link-exact-active {
-        color: $secondary-color;
-        border-color: $secondary-color;
-      }
-    }
   }
+}
+
+.close-sidebar.active {
+  top: 0;
+  z-index: 95;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
 }

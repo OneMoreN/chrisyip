@@ -1,17 +1,15 @@
 <template>
   <div class="sidebar d-flex">
     <SidebarLink
-      :route="'/'"
-      :navText="'Home'"
-      :faIcon="'fas fa-home'"
-      :hoverFaIcon="'fas fa-home'"
+      v-for="link in links"
+      :key="link.navText"
+      :route="link.route"
+      :hash="link.hash"
+      :navText="link.navText"
+      :faIcon="link.faIcon"
+      :hoverFaIcon="link.hoverFaIcon"
+      :mobileSidebar="mobileSidebar"
     />
-    <!-- <SidebarLink
-      :route="'/contact-me'"
-      :navText="'About'"
-      :faIcon="'far fa-circle'"
-      :hoverFaIcon="'fas fa-circle'"
-    /> -->
   </div>
 </template>
 
@@ -22,8 +20,23 @@ export default {
   components: {
     SidebarLink
   },
+  props: ['mobileSidebar'],
   data () {
     return {
+      links: [{
+        route: 'Home',
+        hash: '',
+        navText: 'Home',
+        faIcon: 'fas fa-home',
+        hoverFaIcon: 'fas fa-home'
+      },
+      {
+        route: 'Home',
+        hash: '#about-me',
+        navText: 'About Me',
+        faIcon: 'far fa-circle',
+        hoverFaIcon: 'fas fa-circle'
+      }]
     }
   }
 }

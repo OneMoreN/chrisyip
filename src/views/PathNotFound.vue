@@ -1,6 +1,6 @@
 <template>
-  <section id="error-page">
-    <h1>Oops, looks like something went wrong!</h1>
+  <section id="error">
+    <h1>Oops, looks like this page doesn't exist</h1>
     <br />
     <router-link to="/" id="button">
       Back to home

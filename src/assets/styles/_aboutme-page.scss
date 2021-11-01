@@ -1,4 +1,47 @@
 .aboutme {
   height: 100vh;
-  width: auto;
+  align-items: center;
+  overflow: auto;
+
+  h2 {
+    margin: 0 0 10px;
+  }
+
+  .intro {
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    padding: 2rem;
+    border: solid 1px $component-color;
+    max-height: 100%;
+    overflow: auto;
+
+    .open-modal {
+      cursor: pointer;
+    }
+
+    @include lg {
+      padding: 3rem;
+      margin: 0 50px;
+      text-align: justify;
+    }
+
+    p:not(:last-child) {
+      margin: 0 0 15px;
+    }
+
+    .heading {
+      text-align: center;
+    }
+
+    .skills-container {
+      text-align: center;
+
+      .skill {   
+        display: inline-block;
+        border: 1px solid $component-color;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px;
+      }
+    }
+  }
 }
