@@ -34,6 +34,13 @@ export default {
         navText: 'About Me',
         faIcon: 'far fa-user',
         hoverFaIcon: 'fas fa-user'
+      },
+      {
+        route: 'Home',
+        hash: '#work',
+        navText: 'Work',
+        faIcon: 'far fa-id-badge',
+        hoverFaIcon: 'fas fa-id-badge'
       }]
     }
   }
