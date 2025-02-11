@@ -6,10 +6,10 @@
         Hello again! My name is Christopher Yip and I enjoy coding, cooking and
         board games night (my current board games of choice are
         <a
-          href="https://boardgamegeek.com/boardgame/13/catan"
+          href="https://boardgamegeek.com/boardgame/478/citadels"
           target="_blank"
           rel="noopener noreferrer"
-          >Catan</a
+          >Citadels</a
         >
         and
         <a
