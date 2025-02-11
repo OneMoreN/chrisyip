@@ -3,7 +3,7 @@
   <h1>Work Experience</h1>
 
   <div class="work-container">
-    <WorkCard v-for="(work, index) in work" :key="index" :openModal="openModal" data-aos="zoom-in-up">
+    <WorkCard v-for="(work, index) in work" :key="index" :openModal="openModal" data-aos="zoom-in-up" @click="openModal(index)">
       <div class="work-card-image-container">
         <img :src="getImgUrl(work.image)" :alt="work.image" class="work-card-image"/>
       </div>

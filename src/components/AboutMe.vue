@@ -20,7 +20,7 @@
           Deception</a
         >). I first discovered software development in high school, where I wrote my
         first website using HTML/CSS on Notepad. Being satisfied with the process of
-        coding the website I have decided to begin a journey to become a Software Developer.
+        coding the website I have decided to begin my journey to become a Software Developer.
       </p>
       <p>
         Since developing my first website, I have graduated with a Bachelor's degree in
@@ -47,15 +47,14 @@ export default {
   data () {
     return {
       skills: [
-        'Laravel',
-        'PHP',
-        'SASS',
-        'WordPress',
+        'Python',
         'JavaScript',
-        'Vue.js',
-        'IBM Db2',
-        'IBM iSeries',
-        'LANSA RDML'
+        'Jenkins',
+        'Networking',
+        'Automation',
+        'CI/CD',
+        'CCNA',
+        'Cisco DevNet'
       ]
     }
   },

@@ -5,13 +5,13 @@
 
   <div class="work-modal">
     <div class="modal-content" data-aos="zoom-in">
-      <img :src="getImgUrl(work[0].image)" class="modal-image"/>
-      <div class="job-title">{{work[0].title}}</div>
+      <img :src="getImgUrl(work[modalActive].image)" class="modal-image"/>
+      <div class="job-title">{{work[modalActive].title}}</div>
       <div class="job-dates">
-        {{work[0].dates}}
+        {{work[modalActive].dates}}
       </div>
       <hr>
-      <div class="job-description" v-html="work[0].description">
+      <div class="job-description" v-html="work[modalActive].description">
       </div>
     </div>
   </div>
@@ -25,11 +25,11 @@ import 'aos/dist/aos.css'
 export default ({
   data () {
     return {
-      imgSrc: '@/assets/images/' + this.work[0].image + '.png',
+      imgSrc: '@/assets/images/' + this.work[this.modalActive].image + '.png',
       modalOpacity: 0
     }
   },
-  props: ['closeModal', 'work'],
+  props: ['closeModal', 'work', 'modalActive'],
   mounted () {
     setTimeout(() => { this.modalOpacity = 1 }, 1)
   },

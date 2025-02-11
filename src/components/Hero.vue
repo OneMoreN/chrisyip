@@ -1,6 +1,5 @@
 <template>
     <div class="hero">
-
         <div class="hero-content" data-aos="zoom-in">
             <div>Hello! My name is</div>
             <h1>Christopher Yip</h1>
@@ -19,9 +18,9 @@
                     :icon="'fab fa-github-square'"
                     :linkLabel="'GitHub'"
                 />
-                <a :href="pdfLink" download="Christopher_Yip" id="button">
+                <!-- <a :href="pdfLink" download="Christopher_Yip" id="button">
                     <i class="far fa-file-pdf"></i> <h4 class="link-text">&nbsp;Download my resume</h4>
-                </a>
+                </a> -->
             </div>
         </div>
 

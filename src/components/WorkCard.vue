@@ -1,5 +1,5 @@
 <template>
-  <div class="work-card" @click="openModal">
+  <div class="work-card">
     <slot></slot>
   </div>
 </template>
