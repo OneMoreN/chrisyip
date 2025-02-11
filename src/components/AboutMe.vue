@@ -26,7 +26,7 @@
         Since developing my first website, I have graduated with a Bachelor's degree in
         Information and Communications Technology from Western Sydney University
         where I futher developed my skills and interest in software development.
-        I currently work as a Software Consulting Engineer at <a class="open-modal" @click="openModal">Cisco</a>,
+        I currently work as a Software Consulting Engineer at <a class="open-modal" @click="openModal(0)">Cisco</a>,
         primarily working on network automation.
       </p>
 
