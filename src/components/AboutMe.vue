@@ -1,10 +1,10 @@
 <template>
   <div class="aboutme d-flex">
-    <div class="intro">
+    <div class="intro" data-aos="zoom-in-up">
       <h2 class="heading">About Me</h2>
       <p>
         Hello again! My name is Christopher Yip and I enjoy coding, cooking and
-        playing board games (my current board games of choice are
+        board games night (my current board games of choice are
         <a
           href="https://boardgamegeek.com/boardgame/13/catan"
           target="_blank"
@@ -18,16 +18,16 @@
           rel="noopener noreferrer"
         >
           Deception</a
-        >). I first discovered web development in high school when I wrote my
-        first HTML/CSS website on Notepad.
+        >). I first discovered software development in high school, where I wrote my
+        first website using HTML/CSS on Notepad. Being satisfied with the process of
+        coding the website I have decided to begin my journey to become a Software Developer.
       </p>
       <p>
-        Since my first website, I have graduated with a Bachelor's degree in
+        Since developing my first website, I have graduated with a Bachelor's degree in
         Information and Communications Technology from Western Sydney University
         where I futher developed my skills and interest in software development.
-        I currently work as a Software Developer at <a class="open-modal" @click="openModal">Americold Logistics</a>,
-        primarily working on updating/maintaining their in-house Warehouse
-        Management System.
+        I currently work as a Software Consulting Engineer at <a class="open-modal" @click="openModal(0)">Cisco</a>,
+        primarily working on network automation.
       </p>
 
       <div class="skills-container">
@@ -40,22 +40,27 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
   data () {
     return {
       skills: [
-        'Laravel',
-        'PHP',
-        'SASS',
-        'WordPress',
+        'Python',
         'JavaScript',
-        'Vue.js',
-        'IBM Db2',
-        'IBM iSeries',
-        'LANSA RDML'
+        'Jenkins',
+        'Networking',
+        'Automation',
+        'CI/CD',
+        'CCNA',
+        'Cisco DevNet'
       ]
     }
   },
-  props: ['openModal']
+  props: ['openModal'],
+  created () {
+    AOS.init()
+  }
 }
 </script>

@@ -1,0 +1,58 @@
+#work {
+  min-height: 100vh;
+
+  h1 {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .work-container {
+    display: grid;
+    grid-gap: 2rem;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    @include sm {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .work-card {
+      border: solid 2px $component-color;
+      box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all ease-in-out .3s;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      &:hover {
+        background-color: rgba(61, 90, 128, .3);
+      }
+
+      &-image-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+      }
+
+      &-image {
+        max-height: 10rem;
+        max-width: 60%;
+        display: block;
+        margin: auto;
+      }
+
+      &-title {
+        margin: 10px 0;
+      }
+
+      &-dates {
+        margin: 10px 0;
+        filter: brightness(75%);
+      }
+    }
+  }
+}
