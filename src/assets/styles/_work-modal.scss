@@ -22,7 +22,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  
+  @media screen and (max-width: 1000px) {
+    min-width: 80%;
+  }
+
   .modal-content {
     background-color: $modal-color;
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
