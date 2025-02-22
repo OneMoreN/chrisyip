@@ -37,7 +37,7 @@ export default {
           <li>Delivered network automation software (Cisco NSO, Cisco BPA)</li>
           <li>Wrote automation scripts to perform day to day operations (Python, Bash, Jenkins Groovy)</li>
           <li>Up-skilled a wide range of customer stakeholders. Presented product demos to senior managers, conducted training sessions to technical staff</li>
-          <li>Worked with clients as the technical point of contact, to gather requirementsand demonstrate benefits and effectiveness of the solution.</li>
+          <li>Worked with clients as the technical point of contact, to gather requirements and demonstrate benefits and effectiveness of the solution.</li>
         </ul>`
       },
       {
